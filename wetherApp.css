@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: url('back.jpg') center/cover no-repeat;
+    transition: background 0.5s ease;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("cloud.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(0.7);
+    z-index: -1;
+}
+
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 12px;
+    filter: brightness(9px);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Field */
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #1f6fef;
+    background: transparent;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]::placeholder {
+    color: white;
+}
+
+input[type="text"]:focus {
+    border-color: #1a52d8;
+}
+
+/* Search Button */
+#search-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color: #1f6fef;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease-in;
+}
+
+#search-button:hover {
+    background-color: #164db8;
+    transform: scale(1.05);
+}
+
+/* Weather Information Display */
+.weather-info {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Suggestions Dropdown */
+.suggestions {
+    position: absolute;
+    border: 1px solid #ccc;
+    width: 70%;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.suggestions p {
+    padding: 8px;
+    font-size: 16px;
+    color:white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.suggestions p:hover {
+    background-color: #f1f1f1;
+}
